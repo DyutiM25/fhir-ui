@@ -1,70 +1,159 @@
-# Getting Started with Create React App
+Great — the current `README.md` is just the default one from Create React App. Here's a **clean, professional rewrite** of your README that:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✅ Keeps the relevant CRA info
+✅ Adds your custom app description, usage, setup, and features
+✅ Is tailored for submission for the **AI on FHIR** assessment
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### ✅ Your updated `README.md`:
 
-### `npm start`
+```markdown
+# 🩺 FHIR Query Tool – Natural Language Interface for Simulated Healthcare Data
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is a full-stack application built as part of the **Full-Stack Engineer – AI on FHIR** assessment. It lets users type natural language queries like:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> _"Show me all diabetic patients over 50"_
 
-### `npm test`
+and receive simulated patient data, both in table and chart form.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧠 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ Accepts natural language health queries
+- ✅ Extracts intent using **spaCy** NLP (e.g., age, condition)
+- ✅ Simulates FHIR-like patient data
+- ✅ Renders results in a table
+- ✅ Displays age distribution using `react-chartjs-2` (bar chart)
+- ✅ Built with Flask (Python) and React (JavaScript)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧪 Example Queries
 
-### `npm run eject`
+You can try:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `Show me diabetic patients over 50`
+- `List asthma patients under 18`
+- `Find cancer patients older than 60`
+- `Get flu patients below 40`
+- `Show covid patients`
+- `Find hypertension patients aged 45`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📦 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
 
-## Learn More
+root/
+├── part-1/               # Backend (Flask + spaCy)
+│   ├── app.py
+│   ├── fhir\_query\_parser.py
+├── part-2/fhir-ui/       # Frontend (React)
+│   ├── src/App.js
+│   ├── public/
+│   └── package.json
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+````
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Backend (Python Flask + spaCy)
 
-### Analyzing the Bundle Size
+1. Navigate to the backend folder:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd part-1
+````
 
-### Making a Progressive Web App
+2. Create a virtual environment and install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate          # On Windows
+   pip install flask flask-cors spacy
+   python -m spacy download en_core_web_sm
+   ```
 
-### Advanced Configuration
+3. Run the Flask server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   ```bash
+   python app.py
+   ```
 
-### Deployment
+> ✅ The server will start on `http://localhost:5000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+### Frontend (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Navigate to the frontend folder:
+
+   ```bash
+   cd part-2/fhir-ui
+   ```
+
+2. Install the required packages:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the frontend server:
+
+   ```bash
+   npm start
+   ```
+
+> ✅ Opens at `http://localhost:3000`
+> Make sure your Flask server is running on port `5000`
+
+---
+
+## 📊 Technologies Used
+
+* React (Create React App)
+* Axios
+* Flask (Python)
+* spaCy (`en_core_web_sm`)
+* Chart.js via `react-chartjs-2`
+
+---
+
+## 🌍 Deployment
+
+Frontend deployed manually using **Netlify**.
+👉 https://onye-assessment-dyuti-mengji.netlify.app/
+
+---
+
+## 🗃 Original Create React App Info
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). See full CRA documentation [here](https://facebook.github.io/create-react-app/docs/getting-started).
+
+---
+
+## ✅ Deliverables Summary
+
+| Item                     | Status |
+| ------------------------ | ------ |
+| Flask backend with NLP   | ✅ Done |
+| React frontend with UI   | ✅ Done |
+| Chart + table rendering  | ✅ Done |
+| Sample inputs/outputs    | ✅ Done |
+| README file              | ✅ Done |
+| GitHub Repo              | ✅ Done |
+| Optional: Netlify deploy | ✅ Done |
+
+---
+
+## 🧑‍⚕️ Author
+
+**Dyuti M.**
+Built as part of the take-home challenge for **AI on FHIR**
+
+
