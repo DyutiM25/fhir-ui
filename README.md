@@ -1,6 +1,4 @@
-Sure! Here's a clean and professional `README.md` tailored specifically for **Part 2 (the frontend UI)** of your project:
 
----
 
 # FHIR Query UI (Part 2)
 
