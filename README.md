@@ -66,6 +66,7 @@ fhir-ui/
 ├── public/
 ├── package.json
 
+
 ## 📄 License
 
 This project is part of a take-home assessment and is for educational/demo purposes only.
