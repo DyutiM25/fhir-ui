@@ -58,14 +58,14 @@ Try queries like:
 
 ## 📁 Project Structure
 
-
+```
 fhir-ui/
 ├── src/
 │   ├── App.js         # Main React component
 │   └── index.js
 ├── public/
 ├── package.json
-
+```
 
 ## 📄 License
 
