@@ -1,139 +1,75 @@
-
-# 🩺 FHIR Query Tool – Natural Language Interface for Simulated Healthcare Data
-
-This project is a full-stack application built as part of the **Full-Stack Engineer – AI on FHIR** assessment. It lets users type natural language queries like:
-
-> _"Show me all diabetic patients over 50"_
-
-and receive simulated patient data, both in table and chart form.
+Sure! Here's a clean and professional `README.md` tailored specifically for **Part 2 (the frontend UI)** of your project:
 
 ---
 
-## 🧠 Features
+# FHIR Query UI (Part 2)
 
-- ✅ Accepts natural language health queries
-- ✅ Extracts intent using **spaCy** NLP (e.g., age, condition)
-- ✅ Simulates FHIR-like patient data
-- ✅ Renders results in a table
-- ✅ Displays age distribution using `react-chartjs-2` (bar chart)
-- ✅ Built with Flask (Python) and React (JavaScript)
+This is the React-based frontend for the **AI on FHIR** project. It allows users to input natural language health queries (e.g., _"Show me diabetic patients over 50"_) and visualizes the corresponding results with tables and charts.
 
----
+## 🖥️ Features
 
-## 🧪 Example Queries
-
-You can try:
-
-- `Show me diabetic patients over 50`
-- `List asthma patients under 18`
-- `Find cancer patients older than 60`
-- `Get flu patients below 40`
-- `Show covid patients`
-- `Find hypertension patients aged 45`
-
----
-
-## 📦 Project Structure
-
-```
-
-root/
-├── part-1/               # Backend (Flask + spaCy)
-│   ├── app.py
-│   ├── fhir\_query\_parser.py
-├── part-2/fhir-ui/       # Frontend (React)
-│   ├── src/App.js
-│   ├── public/
-│   └── package.json
-
-````
-
----
+- Text input for natural language queries
+- Sends requests to a Flask backend (`/parse` endpoint)
+- Displays results in:
+  - A table (Name, Age, Condition)
+  - A bar chart (Age distribution)
+- Simple and intuitive UI
 
 ## 🚀 Getting Started
 
-### Backend (Python Flask + spaCy)
+### Prerequisites
 
-1. Navigate to the backend folder:
+- Node.js (v18 recommended)
+- npm
 
-   cd part-1
+### Setup
 
-2. Create a virtual environment and install dependencies:
-
-   python -m venv venv
-   venv\Scripts\activate          # On Windows
-   pip install flask flask-cors spacy
-   python -m spacy download en_core_web_sm
-  
-3. Run the Flask server:
-
-   python app.py
-
-
-> ✅ The server will start on `http://localhost:5000`
-
----
-
-### Frontend (React)
-
-1. Navigate to the frontend folder:
+1. Navigate to the project folder:
 
    cd part-2/fhir-ui
 
-2. Install the required packages:
 
- 
+2. Install dependencies:
+
    npm install
 
-3. Start the frontend server:
+
+3. Start the development server:
+
 
    npm start
 
-> ✅ Opens at `http://localhost:3000`
-> Make sure your Flask server is running on port `5000`
 
----
+   The app will run at `http://localhost:3000`.
 
-## 📊 Technologies Used
 
-* React (Create React App)
-* Axios
-* Flask (Python)
-* spaCy (`en_core_web_sm`)
-* Chart.js via `react-chartjs-2`
+## 🧠 Example Usage
 
----
+Try queries like:
 
-## 🌍 Deployment
+* `Show me diabetic patients over 50`
+* `List asthma patients under 18`
+* `Find patients with hypertension above 60`
+* `Show cancer patients older than 70`
 
-Frontend deployed manually using **Netlify**.
-👉 https://onye-assessment-dyuti-mengji.netlify.app/
+## 📦 Built With
 
----
+* [React](https://reactjs.org/)
+* [Chart.js](https://www.chartjs.org/) + [react-chartjs-2](https://github.com/reactchartjs/react-chartjs-2)
+* [Axios](https://axios-http.com/)
 
-## 🗃 Original Create React App Info
+## 📁 Project Structure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). See full CRA documentation [here](https://facebook.github.io/create-react-app/docs/getting-started).
 
----
+fhir-ui/
+├── src/
+│   ├── App.js         # Main React component
+│   └── index.js
+├── public/
+├── package.json
 
-## ✅ Deliverables Summary
+## 📄 License
 
-| Item                     | Status |
-| ------------------------ | ------ |
-| Flask backend with NLP   | ✅ Done |
-| React frontend with UI   | ✅ Done |
-| Chart + table rendering  | ✅ Done |
-| Sample inputs/outputs    | ✅ Done |
-| README file              | ✅ Done |
-| GitHub Repo              | ✅ Done |
-| Optional: Netlify deploy | ✅ Done |
-
----
-
-## 🧑‍⚕️ Author
-
-**Dyuti M.**
-Built as part of the take-home challenge for **AI on FHIR**
+This project is part of a take-home assessment and is for educational/demo purposes only.
 
 
