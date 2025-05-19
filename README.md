@@ -1,14 +1,4 @@
-Great — the current `README.md` is just the default one from Create React App. Here's a **clean, professional rewrite** of your README that:
 
-✅ Keeps the relevant CRA info
-✅ Adds your custom app description, usage, setup, and features
-✅ Is tailored for submission for the **AI on FHIR** assessment
-
----
-
-### ✅ Your updated `README.md`:
-
-```markdown
 # 🩺 FHIR Query Tool – Natural Language Interface for Simulated Healthcare Data
 
 This project is a full-stack application built as part of the **Full-Stack Engineer – AI on FHIR** assessment. It lets users type natural language queries like:
