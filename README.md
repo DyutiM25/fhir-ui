@@ -56,24 +56,19 @@ root/
 
 1. Navigate to the backend folder:
 
-   ```bash
    cd part-1
-````
 
 2. Create a virtual environment and install dependencies:
 
-   ```bash
    python -m venv venv
    venv\Scripts\activate          # On Windows
    pip install flask flask-cors spacy
    python -m spacy download en_core_web_sm
-   ```
-
+  
 3. Run the Flask server:
 
-   ```bash
    python app.py
-   ```
+
 
 > ✅ The server will start on `http://localhost:5000`
 
@@ -83,21 +78,16 @@ root/
 
 1. Navigate to the frontend folder:
 
-   ```bash
    cd part-2/fhir-ui
-   ```
 
 2. Install the required packages:
 
-   ```bash
+ 
    npm install
-   ```
 
 3. Start the frontend server:
 
-   ```bash
    npm start
-   ```
 
 > ✅ Opens at `http://localhost:3000`
 > Make sure your Flask server is running on port `5000`
