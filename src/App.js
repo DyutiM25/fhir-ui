@@ -20,7 +20,7 @@ function App() {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:5000/parse", { query })
+      .post("https://fhir-backend.onrender.com/parse", { query })
       .then((res) => {
         setResults(res.data.patients);
       })
