@@ -17,16 +17,22 @@ ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 function App() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = () => {
+    setHasSearched(true);
+    setLoading(true);
     axios
       .post("https://fhir-backend.onrender.com/parse", { query })
       .then((res) => {
-        setResults(res.data.patients);
+        setResults(Array.isArray(res.data.patients) ? res.data.patients : []);
+        setLoading(false);
       })
       .catch((err) => {
         console.error("API error:", err);
         alert("Something went wrong! Is your backend running?");
+        setLoading(false);
       });
   };
 
@@ -67,7 +73,13 @@ function App() {
         </button>
       </div>
 
-      {results.length > 0 && (
+      {loading && <p>Loading...</p>}
+
+      {!loading && hasSearched && results.length === 0 && (
+        <h3>No patients found</h3>
+      )}
+
+      {!loading && results.length > 0 && (
         <>
           <h3>Age Distribution</h3>
           <div style={{ maxWidth: 600, margin: "0 auto 30px auto" }}>
